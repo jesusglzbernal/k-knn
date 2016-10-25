@@ -170,8 +170,6 @@ public class query {
         double yy = 0.0;        // The yy term for linear and polynomial kernel
         double xy = 0.0;        // The xy term for linear and polynomial kernel
         double xMy = 0.0;       // The xMy term for Radial Basis Function distance
-        double xMx = 0.0;       // The xMx term for Radial Basis Function distance
-        double yMy = 0.0;       // The yMy term for Radial Basis Function distance
         double sigma = 0.90;
         // Distance id:
         // 0: Euclidean distancce
@@ -298,10 +296,10 @@ public class query {
         //classAssignment tmpWList = new classAssignment();
 
         // Create the string containing the samples classes
-        // Only for the first k=10 neighbors, to save processor time
-        for (int i = 0; i < 10 /*mycv.cValues.size()*/; i++) {
+        // Only for the first k=20 neighbors, to save processor time
+        for (int i = 0; i < 20 /*mycv.cValues.size()*/; i++) {
             mys = mys + mycv.cValues.get(i).sclass;
-            if (i < 10 /*mycv.cValues.size()*/) {
+            if (i < 20 /*mycv.cValues.size()*/) {
                 mys = mys + " ";
             }
         }

@@ -26,25 +26,12 @@ public class Kknn {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI17", "RTI-17.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI14", "RTI14-0.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI14", "RTI14-1.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI16", "RTI16-4040-0.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI16", "RTI16-4040-1.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI16", "RTI16-4540-0.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI16", "RTI16-4540-1.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI17", "RTI17-0.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI17", "RTI17-1.csv");
-        
         // Set the path of the input file and the file name
         //dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI16", "RTI16-4040-0.csv");
-
-        dataSet dS = new dataSet("/Users/jagonzalez/Documents/R/Telas/Firmas/RTI16", "ecoli.csv");
-        //dataSet dS = new dataSet("/Users/jagonzalez/Documents/knn", "carTrain.csv");
+        dataSet dS = new dataSet("/home/jesus/SpiderOak Hive/work/Development/NetBeansProjects/kknn/src/kknn", "ecoli.csv");
         
         // Read the input file name
         dS.ReadInputFile();
-        //dS.printData();
         
         // Find the minimum and maximum values for each attribute, preparing for normalization of data
         dS.setMinMax();
@@ -52,12 +39,12 @@ public class Kknn {
         dS.normalize();
         //dS.printData();
    
+        // Making a query
         /*
         query qS = new query("/Users/jagonzalez/Documents/R/Telas/Firmas/RTIA", "RTItest.csv", dS.sMinVal, dS.sMaxVal, dS.sNames);
         //qS = new query("/Users/jagonzalez/Documents/knn", "carTest.csv", dS.sMinVal, dS.sMaxVal, dS.sNames);
         qS.ReadQueryFile();
         qS.normalize();
-        
         //qS.printQuery();
         qS.getDistances(dS.dset, dS.dSamples);
         //qS.printDistances(dS.dset);
